@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Receipt
+{% endblock %}
+
+{% block main %}
+
+
+<section class="offer section-wrapper-description">
+		<div class="container">
+
+            <h2 class="section-title">
+			 Your Receipt
+			 </h2>
+			<div class="row">
+				<div>
+					<div class="offer-item" style="text-align:left;">
+					    <h2 style="text-decoration:underline;">
+			            Trip Details
+			            </h2>
+					    <h4><strong>Destination: </strong>{{attraction}} </h4>
+						<h4><strong>Acccomodation:</strong> {{accomodation}}</h4>
+						<h4><strong>Your tour guide:</strong> <span>${{tour_guide}}</span></h4>
+						<h4><strong>Length of Trip:</strong> {{ safari_days}}</h4>
+						<h4><strong>Trip for:</strong> {{people}}</h4>
+						<h4><strong>Total Charge:</strong> ${{ total}}</h4>
+
+
+					</div>
+
+					<div class="offer-item" style="text-align:left;">
+					    <h2 style="text-decoration:underline;">
+			            Billing Address
+			            </h2>
+					    <h4><strong>Name:</strong> {{first_name}} {{last_name}} </h4>
+						<h4><strong>Email adress:</strong> {{email}}</h4>
+						<h4><strong>Address line 1:</strong> {{address1}}</h4>
+						<h4><strong>Address line 2:</strong> {{address2}}</h4>
+						<h4><strong>City:</strong> {{city}}</h4>
+						<h4><strong>State:</strong> {{state}}</h4>
+						<h4><strong>Zip:</strong> {{zip}}</h4>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

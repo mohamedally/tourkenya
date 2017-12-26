@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Payment info
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="row">
+     <form name="payment" action="/receipt" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="first_name">First name</label>
+      <input type="text" class="form-control" name="first_name" placeholder="First name" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="last_name">Last name</label>
+      <input type="text" class="form-control" name="last_name" placeholder="Last name" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="email" class="form-control" name="email" placeholder="user@example.com" required>
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" name="address1" placeholder="1234 Main St" required>
+  </div>
+  <div class="form-group">
+    <label for="address2">Address 2</label>
+    <input type="text" class="form-control" name="address2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="city">City</label>
+      <input type="text" class="form-control" name="city" placeholder="City" required>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="state">State</label>
+      <input type="text" class="form-control" name="state" placeholder="State" required>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="zip">Zip</label>
+      <input type="text" class="form-control" name="zip" placeholder="Zip" required>
+    </div>
+  </div>
+  <button type="submit" name="id" value="{{package_id}}" class="btn btn-primary">Proceed to receipt</button>
+</form>
+  </div>
+</div>
+
+
+{% endblock %}

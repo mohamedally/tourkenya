@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+       <section class="offer section-wrapper-description">
+		<div class="container">
+			<div class="row">
+				    <div class="col-sm-4 col-xs-6">
+					    <div class="offer-item">
+					        <h3 style="padding-bottom: 10px;">
+						    Username: {{ index.username }}
+						    </h3>
+						<div class="icon" >
+						</div>
+
+						<div>Email: {{index.email}}</div>
+						<div>Permanent Address: <span>{{ index.address}}</span></div>
+                        <div>City: {{ index.city }}</div>
+                        <div>Country: {{index.country}}</div>
+                        <div>Phone Number: {{ index.phone }}</div>
+					 </div>
+
+				</div> <!-- /.col-md-3 -->
+
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section> <!-- /.offer -->
+
+
+
+{% endblock %}

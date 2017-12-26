@@ -1,0 +1,540 @@
+{% extends "layout.html" %}
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+
+	 <section>
+
+            <div class="container">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <img src="/static/assets/images/rsz_1pelican.png" class="img-responsive" >
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>Diani,South Coast</h1>
+                                    <p style="color:#ffffff">Discover the beautiful beaches and sights at Diani,Kenya.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                        <div class="item">
+                            <img src="/static/assets/images/rsz_elephants.jpg" class="img-responsive">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>Maasai Mara,Rift Valley</h1>
+                                    <p style="color:#ffffff">View the largest mammals in the world closer than ever before.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                        <div class="item">
+                            <img src="/static/assets/images/rsz_kempinski.jpg" class="img-responsive">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>Kempinski,Nairobi</h1>
+                                    <p style="color:#ffffff">Visit the largest and finest Five-star hotel in Africa.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                        <div class="item">
+                            <img src="/static/assets/images/rsz_scuba2.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Mombasa</h1>
+                                <p style="color:#ffffff">Giving you a more personal touch with marine life.</p>
+
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+
+                        <div class="item">
+                            <img src="static/assets/images/rsz_oryx.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Longonot</h1>
+                                <p style="color:#ffffff">Come see the largest herds of oryx grazing on the beautiful Longonot landscape.</p>
+
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                        <div class="item">
+                            <img src="static/assets/images/rsz_lions.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Amboseli</h1>
+                                <p style="color:#ffffff">Join us in witnessing the power of the King of the Jungle </p>
+
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                        <div class="item">
+                            <img src="/static/assets/images/rsz_wildebeest.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Maasai Mara</h1>
+                                <p style="color:#ffffff">JWitness the annual wildebeest migration. The seventh wonder of the world.</p>
+
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                        <div class="item">
+                            <img src="/static/assets/images/rsz_11beach.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Mombasa</h1>
+                                <p style="color:#ffffff">Get yourself a tan in the beautiful whitesands of the coast under the radiant East African sun.</p>
+
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                        <div class="item">
+                            <img src="/static/assets/images/rsz_kempinski1.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Sarova</h1>
+                                <p style="color:#ffffff">Dine like a prince in the finest resorts in the capital.</p>
+
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                    </div>
+                    <!-- End Carousel Inner -->
+
+
+                    <ul class="nav nav-pills nav-justified">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">Sandy Beaches<small>(Diani)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="1"><a href="#">Elephants<small>(Maasai Mara)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="2"><a href="#">Kempinski<small>(Nairobi)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="3"><a href="#">Marine Park<small>(Mombasa)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="4"><a href="#">Oryx<small>(Longonot)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="5"><a href="#">Lions<small>(Maasai Mara)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="6"><a href="#">Wildebeest<small>(Serengeti)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="7"><a href="#">WhiteSands<small>(Mombasa)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="8"><a href="#">Sarova<small>(Nairobi)</small></a></li>
+                    </ul>
+                </div>
+                <!-- End Carousel -->
+            </div>
+        </section>
+
+<!-- Find a Tour -->
+	<section class="tour section-wrapper container">
+		<h2 class="section-title">
+			Popular Destinations
+		</h2>
+		<p class="section-subtitle">
+		</p>
+		<div class="row" style="text-align:center">
+			<form role="form" class="form-dropdown form-inline" action="/description" method="post">
+			<div >
+					<div class="form-group">
+						<label for="sel1"></label>
+						<select name="name" class="form-control border-radius" id="sel1" onchange="this.form.submit();">
+							{% for item in wildlife_list %}
+								<option type="submit" value="{{item.name}}">{{item.name}}</option>
+							{% endfor %}
+						</select>
+					</div>
+
+
+			</div>
+			</form>
+
+
+		</div>
+	</section> <!-- /.tour -->
+
+
+<!-- Our Blazzing offers -->
+	<section class="offer section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				What We Offer.
+			</h2>
+			<p class="section-subtitle">
+				Lorem Ipsum is simply dummy text of the industry.
+			</p>
+			<div class="row">
+				<div class="col-sm-3 col-xs-6">
+					<div class="offer-item">
+						<div class="icon">
+							<i class="ion-social-euro"></i>
+						</div>
+						<h3>
+							Affordable Pricing
+						</h3>
+						<p>
+							Class aptent taciti sociosutn tora torquent conub nost reptos himenaeos.
+						</p>
+					</div>
+				</div> <!-- /.col-md-3 -->
+
+				<div class="col-sm-3 col-xs-6">
+					<div class="offer-item">
+						<div class="icon">
+							<i class="ion-ios-home"></i>
+						</div>
+						<h3>
+							High class Hotels
+						</h3>
+						<p>
+							Class aptent taciti sociosutn tora torquent conub nost reptos himenaeos.
+						</p>
+					</div>
+				</div> <!-- /.col-md-3 -->
+
+				<div class="col-sm-3 col-xs-6">
+					<div class="offer-item">
+						<div class="icon">
+							<i class="ion-android-bus"></i>
+						</div>
+						<h3>
+							Luxury Transport
+						</h3>
+						<p>
+							Class aptent taciti sociosutn tora torquent conub nost reptos himenaeos.
+						</p>
+					</div>
+				</div> <!-- /.col-md-3 -->
+
+				<div class="col-sm-3 col-xs-6">
+					<div class="offer-item">
+						<div class="icon">
+							<i class="ion-ios-locked"></i>
+						</div>
+						<h3>
+							Highest Security
+						</h3>
+						<p>
+							Class aptent taciti sociosutn tora torquent conub nost reptos himenaeos.
+						</p>
+					</div>
+				</div> <!-- /.col-md-3 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section> <!-- /.offer -->
+
+
+	<section class="visit section-wrapper attractions_brown">
+		<div class="container">
+			<h2 class="section-title">
+				Top places to visit
+			</h2>
+			<p class="section-subtitle">
+				Lorem Ipsum is simply dummy text of the.
+			</p>
+			<div class="owl-carousel visit-carousel" id="">
+				{% for item in wildlife_list %}
+					<form action="/description" method="post">
+					<div class="item">
+						<div class="hovereffect" style="width: 360px;height:380px;">
+                            <img class="img-responsive" src="{{item.image1}}" style="height:360px;">
+                            <div class="overlay">
+                                <h2>{{item.name}}</h2><br>
+                                    <button type="submit" name="name" class="button small fill-red transition-white" value="{{item.name}}">ENTER</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+					</form>
+				{% endfor %}
+
+			</div> <!-- /.  -->
+		</div> <!-- /.container -->
+	</section> <!-- /.visit -->
+
+	<section class="visit section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				The Finest Accomodation
+			</h2>
+			<p class="section-subtitle">
+				Lorem Ipsum is simply dummy text of the.
+			</p>
+		<div class="owl-carousel visit-carousel" id="">
+				{% for item in resort_list %}
+					<form action="/hotel-description" method="post">
+					<div class="item">
+						<div class="hovereffect" style="width: 360px;height:380px;">
+                            <img class="img-responsive" src="{{item.image1}}" style="height:380px;">
+                            <div class="overlay" style="display:block;">
+                                <h2>{{item.name}}</h2><br>
+
+                                    <button type="submit" name="name" class="button small fill-red transition-white" value="{{item.name}}">ENTER</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+					</form>
+				{% endfor %}
+
+			</div> <!-- /.  --!>
+		</div> <!-- /.container -->
+	</section> <!-- /.visit -->
+
+	<!--video gallery-->
+	<section id="videos" class="attractions_brown">
+            <div class="container" id="flex-container">
+                <div class="flex-item">
+                    <h1 style="text-align:center;color: #977c44;"><span>VIDEOS</span></h1>
+                    <div class="video-gallery">
+                      <div class="html5gallery" data-skin="gallery" data-responsive="true" style="height:500px;width:1000px;">
+                          <a href="https://www.youtube.com/embed/a7XxAcnIesk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/magical.png" alt="Magical Kenya"> </a>
+                          <a href="https://www.youtube.com/embed/hLXei8UkoYY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/kenyalife.png" alt="Kenya Life"> </a>
+                          <a href="https://www.youtube.com/embed/wteoO0yJXEw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/kenyaafrica.png" alt="Kenya Mara"> </a>
+                          <a href="https://www.youtube.com/embed/RU278qbaGbw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/mara.png" alt="Mara"> </a>
+                          <a href="https://www.youtube.com/embed/cV_8R9NWfqc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/pamper.png" alt="Horse Safari"> </a>
+                          <a href="https://www.youtube.com/embed/kVdXTduStXs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/landing.png" alt="Activities"> </a>
+                          <a href="https://www.youtube.com/embed/tFbX8fUNDoc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/nomad-diani.png" alt="Beautiful Coast"> </a>
+                          <a href="https://www.youtube.com/embed/zhNj3RFkwLc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/islands.png" alt="Islands"> </a>
+                          <a href="https://www.youtube.com/embed/uIBHuqeis3U?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/safaricom.png" alt="Landmarks"> </a>
+                          <a href="https://www.youtube.com/embed/6pqTicfMUoo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/air.png" alt="Aerial View"> </a>
+                          <a href="https://www.youtube.com/embed/a9Gk6-Jy84Q?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/zebra.jpeg" alt="Wildlife"> </a>
+                          <a href="https://www.youtube.com/embed/w29Og-xxt7o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/chale.png" alt="Chale Island"> </a>
+                          <a href="https://www.youtube.com/embed/ML4lIGRICnk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/come.png" alt="Come to Kenya"> </a>
+                          <a href="https://www.youtube.com/embed/aljqPcFjOpE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen><img src="/static/assets/images/pamper.png" alt="Pamper Yourself"> </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+	<!--end video gallery-->
+
+<div class="offer-cta">
+	<div class="container">
+		<div class="offering">
+			<div class="percent">
+				<span>15%</span> off
+			</div>
+			<div class="FTour">
+				for <strong>Family Tour</strong>
+			</div>
+			<a class="btn btn-default price-btn" href="#">
+				see our price
+			</a>
+		</div> <!-- /.offering -->
+	</div> <!-- /.container-->
+</div> <!-- /.offer-cta -->
+
+<section class="additional-services section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				Popular Activities
+			</h2>
+			<p class="section-subtitle">
+				Lorem Ipsum is simply dummy text of the industry.
+			</p>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-1.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Photography
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-2.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Cycling
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-3.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Waking
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-4.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Skiing
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-5.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Sea beach
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-6.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Hill tracking
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section> <!-- /.Additional-services -->
+
+
+	<div class="section-wrapper sponsor">
+		<div class="container">
+			<div class="owl-carousel sponsor-carousel">
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+			</div> <!-- /.owl-carousel -->
+		</div> <!-- /.container -->
+	</div> <!-- /.sponsor -->
+
+{% endblock %}
+
+
+
+
+

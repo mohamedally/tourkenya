@@ -1,0 +1,84 @@
+  <html>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="/static/style1.css" rel="stylesheet" type="text/css">
+    <link href="/static/style2.css" rel="stylesheet" type="text/css">
+    <link href="/static/butns.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Sansita|Baloo" rel="stylesheet">
+    <script type="text/javascript">
+
+      (function() {
+        function id(v) {
+          return document.getElementById(v);
+        }
+
+        function loadbar() {
+          var ovrl = id("overlay"),
+            prog = id("progress"),
+            stat = id("progstat"),
+            img = document.images,
+            c = 0;
+          let tot = img.length;
+
+          function imgLoaded() {
+            c += 1;
+            var perc = ((100 / tot * c) << 0) + "%";
+            prog.style.width = perc;
+            stat.innerHTML = "Loading " + perc;
+            if (c === tot) return doneLoading();
+          }
+
+          function doneLoading() {
+            ovrl.style.opacity = 0;
+            setTimeout(function() {
+              ovrl.style.display = "none";
+            }, 1200);
+          }
+          for (var i = 0; i < tot; i++) {
+            var tImg = new Image();
+            tImg.onload = imgLoaded;
+            tImg.onerror = imgLoaded;
+            tImg.src = img[i].src;
+          }
+        }
+        document.addEventListener('DOMContentLoaded', loadbar, false);
+      }());
+    </script>
+    <title>TourKenya:Tours and Safari</title>
+  </head>
+
+  <body>
+    <div id="overlay">
+      <div id="progstat"></div>
+      <div id="progress"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- /video text -->
+        <div id="main">
+          <img src="/static/assets/icon/kenya2.png" alt="logo of the company" id="logo" class="m-page scene_element scene_element--fadein content delay20">
+          <h1 class="m-page scene_element scene_element--fadeinup content delay26">TourKenya</h1>
+          <h3 class="m-page scene_element scene_element--fadeinup content delay30">Your paradise awaits!</h3>
+          <a href="/home" class="button border-purple gradient-purple rounded transition-white m-page scene_element scene_element--fadeinup content delay30">Get Started</a>
+
+          <!-- /video -->
+          <video id="my-video" class="video" autoplay="autoplay" loop="loop" width="300" height="150">
+                <source src="/static/assets/Kenya%20Tourist%20Board%20Video-clip.mp4" type="video/mp4" />
+                <source src="/static/assets/Kenya%20Tourist%20Board%20Video_CLIPCHAMP_keep.webm" type="video/webm" />
+                <source src="/static/assets/Kenya%20Tourist%20Board%20Video_CLIPCHAMP_keep.ogv" type='video/ogg; codecs="theora, vorbis"'>
+
+            </video>
+          <!-- /video -->
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="js/script1.js"></script>
+
+  </body>
+
+  </html>

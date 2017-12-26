@@ -1,0 +1,660 @@
+<!DOCtype html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="project/tourkenya/templates/styling/butns.min.css" rel="stylesheet" type="text/css">
+    <link href="project/tourkenya/templates/styling/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="project/tourkenya/templates/styling/style.css" rel="stylesheet" type="text/css">
+    <link href="project/tourkenya/templates/styling/style1.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Sansita|Baloo|Cardo" rel="stylesheet">
+    <link rel="shortcut icon" href="icon\kflag.ico" />
+    <title>TourKenya:Tours and Safari</title>
+    <script type="text/javascript">
+        ;
+        (function() {
+            function id(v) {
+                return document.getElementById(v);
+            }
+
+            function loadbar() {
+                var ovrl = id("overlay"),
+                    prog = id("progress"),
+                    stat = id("progstat"),
+                    img = document.images,
+                    c = 0;
+                let tot = img.length;
+
+                function imgLoaded() {
+                    c += 1;
+                    var perc = ((100 / tot * c) << 0) + "%";
+                    prog.style.width = perc;
+                    stat.innerHTML = "Loading " + perc;
+                    if (c === tot) return doneLoading();
+                }
+
+                function doneLoading() {
+                    ovrl.style.opacity = 0;
+                    setTimeout(function() {
+                        ovrl.style.display = "none";
+                    }, 1200);
+                }
+                for (var i = 0; i < tot; i++) {
+                    var tImg = new Image();
+                    tImg.onload = imgLoaded;
+                    tImg.onerror = imgLoaded;
+                    tImg.src = img[i].src;
+                }
+            }
+            document.addEventListener('DOMContentLoaded', loadbar, false);
+        }());
+    </script>
+
+</head>
+
+<body>
+    <div id="overlay">
+        <div id="progstat"></div>
+        <div id="progress"></div>
+    </div>
+<div class="container-fluid">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top" style="background:#e6dac1;">Home</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div class="flex-container">
+                            <div class="flex-item">
+                                <form class="navbar-form" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search" name="q" style="width:400px;">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="accommodation.html">Accommodation</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="transportation.html">Transport</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="booking.html">Booking</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#videos">Videos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#subscribe">Subscribe</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+<!-- end of navbar -->
+    <br>
+    <div id="main" class="m-page scene_element scene_element--fadein content">
+        <section>
+            <div id="uber-bar" class="container-fluid">
+              <div class="flex-item" id="header-bar">
+                  <img src="icon/flag2.png" alt="logo of the company" id="logo">TourKenya
+              </div>
+            </div>
+
+            <div class="container">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <img src="images/rsz_1pelican.png" class="img-responsive" >
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>Diani,South Coast</h1>
+                                    <p>Discover the beautiful beaches and sights at Diani,Kenya.</p>
+                                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                        <div class="item">
+                            <img src="images/rsz_elephants.jpg" class="img-responsive">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>Maasai Mara,Rift Valley</h1>
+                                    <p>View the largest mammals in the world closer than ever before.</p>
+                                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                        <div class="item">
+                            <img src="images/rsz_kempinski.jpg" class="img-responsive">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>Kempinski,Nairobi</h1>
+                                    <p>Visit the largest and finest Five-star hotel in Africa.</p>
+                                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                        <div class="item">
+                            <img src="images/rsz_scuba2.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Mombasa</h1>
+                                <p>Giving you a more personal touch with marine life.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+
+                        <div class="item">
+                            <img src="images/rsz_oryx.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Longonot</h1>
+                                <p>Come see the largest herds of oryx grazing on the beautiful Longonot landscape.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                        <div class="item">
+                            <img src="images/rsz_lions.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Amboseli</h1>
+                                <p>Join us in witnessing the power of the King of the Jungle </p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                        <div class="item">
+                            <img src="images/rsz_wildebeest.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Maasai Mara</h1>
+                                <p>JWitness the annual wildebeest migration. The seventh wonder of the world.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                        <div class="item">
+                            <img src="images/rsz_11beach.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Mombasa</h1>
+                                <p>Get yourself a tan in the beautiful whitesands of the coast under the radiant East African sun.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                        <div class="item">
+                            <img src="images/rsz_kempinski1.jpg" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1>Longonot</h1>
+                                <p>Dine like a prince in the finest resorts of the Rift Valley.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+
+                    </div>
+                    <!-- End Carousel Inner -->
+
+
+                    <ul class="nav nav-pills nav-justified">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">Sandy Beaches<small>(Diani)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="1"><a href="#">Elephants<small>(Maasai Mara)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="2"><a href="#">Kempinski<small>(Nairobi)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="3"><a href="#">Marine Park<small>(Mombasa)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="4"><a href="#">Oryx<small>(Longonot)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="5"><a href="#">Lions<small>(Maasai Mara)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="6"><a href="#">Wildebeest<small>(Serengeti)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="7"><a href="#">WhiteSands<small>(Mombasa)</small></a></li>
+                        <li data-target="#myCarousel" data-slide-to="8"><a href="#">Sarova<small>(Nairobi)</small></a></li>
+                    </ul>
+                </div>
+                <!-- End Carousel -->
+            </div>
+        </section>
+        <section id="about" class="attractions_brown" style="padding-bottom:10px;width:100%;">
+            <div class="container-fluid">
+                <div class="row" id="section-1">
+                    <h1 class="section1_header"><span>ABOUT<span></h1>
+                    <p class="section_text">Kenya is a beautiful country, so beautiful that we as TourKenya felt that we should make it accessible to every single person on this planet. TourKenya is a company designed to make your travel experiences as enjoyable as possible
+                        by removing all the pains and stresses of planning. We host all reknowned hotels, travel agencies, resorts, landmarks , gameparks and reserves. In short we have everything you would need to plan a wonderful trip to our country
+                        for your vacation on this single patform. Our goal is to provide the best service with utmost efficiency.</p>
+                    <br>
+                    <p class="section_text innerText">Visit our lovely country. Book your trip now! Dont be left out!</p>
+                  </div>
+                    <div class="container-fluid" id="about-button">
+                        <div class="flex-item">
+                            <button id="roll" class="button small transition-white">PLAN YOUR TRIP</button>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="attractions_gray" style="padding-top:0;" id="features">
+            <div class="container">
+                <div class="row">
+                    <h1 style="text-align:center;"><span>FEATURED<span></h1>
+                    <p class="section_text">Here is a list of the types of organisations and services featured on our website.</p>
+                    <div class="col-md-3 col-md-push-2 list">
+                        <h3 style="padding-top:0;">Hosted Organisations:</h3>
+                        <ul class="emojis">
+                            <li><img src="icon/kenya.png" alt="" style="height:16px;width:16px;"> Ministry of Tourism</li>
+                            <li><i class="em em-palm_tree"></i> Resorts</li>
+                            <li><i class="em em-office"></i> Apartments</li>
+                            <li><i class="em em-ramen"></i> Restaurants</li>
+                            <li><i class="em em-airplane"></i> Air Charters</li>
+                            <li><i class="em em-oncoming_automobile"></i> Car Hires</li>
+                            <li><i class="em em-oncoming_taxi"></i> Cab Companies</li>
+                            <li><i class="em em-ship"></i> Cruise Ship Companies</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-md-push-4 list">
+                        <h3>Services we provide:</h3>
+                        <ul class="emojis">
+                            <li><i class="fa fa-map-marker" aria-hidden="true" style="padding-left:5px;padding-right:13px;"></i>Maps</li>
+                            <li><i class="em em-sunny"></i> Weather Updates</li>
+                            <li><i class="em em-traffic_light"></i> Transport Updates</li>
+                            <li><i class="em em-book"></i></i> Booking</li>
+                            <li><i class="em em-bar_chart"></i> Price Comparison</li>
+                            <li><i class="em em-pencil"></i> Consumer Reviews</li>
+                            <li><i class="em em-star"></i> Ratings</li>
+                            <li><i class="em em-moneybag"></i> Discounts and Offers</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <p class="section_text animated infinite pulse">Kenya is just a click away!</p>
+                <button id="roll" class="button small transition-white">PLAN YOUR TRIP</button>
+            </div>
+        </section>
+        <section class="attractions_brown" id="wildlife">
+
+            <!-- <div class="glyphicon-left">
+              <span class="glyphicon glyphicon-chevron-left" style="color:#F15A29;"></span>
+            </div>                    -->
+            <div class="container">
+                <div class="row">
+                    <h1 class="section2_header"><span>Wildlife<span></h1>
+                    <p class="section_text">The most diverse and beautiful game parks in the region</p>
+
+                    {% for item in wildlife_list %}
+                        <div class="col-md-3">
+                            <div class="hovereffect">
+                                <img class="img-responsive images_small" src= {{item.image1}} alt="">
+                                <div class="overlay">
+                                    <h2>{{ item.name }}</h2>
+                                    <p>
+                                        <button type="button" class="button small fill-red transition-white" href="#">ENTER</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <!--<div class="col-md-3">-->
+                    <!--    <div class="hovereffect">-->
+                    <!--        <img class="img-responsive images_small" src="images/marine.jpg" alt="">-->
+                    <!--        <div class="overlay">-->
+                    <!--            <h2>MOMBASA MARINE PARK</h2>-->
+                    <!--            <p>-->
+                    <!--                <button type="button" class="button small fill-red transition-white" href="#">ENTER</button>-->
+                    <!--            </p>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3">-->
+                    <!--    <div class="hovereffect">-->
+                    <!--        <img class="img-responsive images_small" src="images/simba.jpeg" alt="">-->
+                    <!--        <div class="overlay">-->
+                    <!--            <h2>LONGONOT NATIONAL PARK</h2>-->
+                    <!--            <p>-->
+                    <!--                <button type="button" class="button small fill-red transition-white" href="#">ENTER</button>-->
+                    <!--            </p>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3">-->
+                    <!--    <div class="hovereffect">-->
+                    <!--        <img class="img-responsive images_small" src="images/cheetah.jpeg" alt="">-->
+                    <!--        <div class="overlay">-->
+                    <!--            <h2>NAIROBI NATIONAL PARK</h2>-->
+                    <!--            <p>-->
+                    <!--                <button type="button" class="button small fill-red transition-white" href="#">ENTER</button>-->
+                    <!--            </p>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </section>
+
+
+        <section class="attractions_gray" id="landmarks">
+            <div class="container">
+                <div class="row">
+                    <h1 class="section_header"><span>Landmarks<span></h1>
+                    <p class="section_text">Catch a glimpse of the most remarkable features nature has to offer!</p>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/aerial.jpeg" alt="">
+                            <div class="overlay">
+                                <h2>MOUNT KENYA</h2>
+                                <p>
+                                    <button type="button" class="button small fill-green transition-white" href="#">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/cliff.jpeg" alt="">
+                            <div class="overlay">
+                                <h2>DIANI CLIFF</h2>
+                                <p>
+                                    <button type="button" class="button small fill-green transition-white" href="#">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/nakuru-lake.jpg" alt="">
+                            <div class="overlay">
+                                <h2>LAKE NAKURU</h2>
+                                <p>
+                                    <button type="button" class="button small fill-green transition-white" href="#">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/mt-longonot-national-park.jpg" alt="">
+                            <div class="overlay">
+                                <h2>MOUNT LONGONOT</h2>
+                                <p>
+                                    <button type="button" class="button small fill-green transition-white" href="#">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="attractions_brown" id="resorts">
+            <div class="container">
+                <div class="row">
+                    <h1 class="section2_header"><span>Resorts<span></h1>
+                    <p class="section_text">Stay in the best resorts in East Africa</p>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/governors-camp.jpg" alt="" style="box-shadow: 3px 3px 5px 6px #ccc;">
+                            <div class="overlay">
+                                <h2>GOVERNORS CAMP</h2>
+                                <p>
+                                    <button type="button" class="button small fill-black transition-white" href="#">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/diani-sea-resort.jpg" alt="">
+                            <div class="overlay">
+                                <h2>DIANI</h2>
+                                <p>
+                                    <button type="button" class="button small fill-black transition-white" href="#">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/Kempinski.jpg" alt="">
+                            <div class="overlay">
+                                <h2>VILLA ROSA KEMPINSKI</h2>
+                                <p>
+                                    <button type="button" class="button small fill-black transition-white" href="#">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/masada.jpg" alt="">
+                            <div class="overlay">
+                                <h2>MASADA</h2>
+                                <p>
+                                    <button type="button" class="button small fill-black transition-white" href="#">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </section>
+        <section class="attractions_gray" id="culture">
+            <div class="container">
+
+                <div class="row">
+                    <h1 class="section_header"><span>Culture<span></h1>
+                    <p class="section_text">Visit Kenya, the country with the most diverse indigenous cultures.</p>
+                    <!-- <span class="glyphicon glyphicon-menu-left col-sm-0" style="color:#F15A29;"></span> -->
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/maasai4.jpg" alt="">
+                            <div class="overlay">
+                                <h2>MAASAI</h2>
+                                <p>
+                                    <button type="button" class="button small transition-white" href="#" id="roll">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/swahili-culture05.jpg" alt="">
+                            <div class="overlay">
+                                <h2>SWAHILI</h2>
+                                <p>
+                                    <button type="button" class="button small transition-white" href="#" id="roll">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/bomas.jpg" alt="">
+                            <div class="overlay">
+                                <h2>BOMAS OF KENYA</h2>
+                                <p>
+                                    <button type="button" class="button small transition-white" href="#" id="roll">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hovereffect">
+                            <img class="img-responsive images_small" src="images/kalenjin.jpeg" alt="">
+                            <div class="overlay">
+                                <h2>KALENJIN</h2>
+                                <p>
+                                    <button type="button" class="button small  transition-white" href="#" id="roll">ENTER</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <span class="glyphicon glyphicon-menu-left" style="color:#F15A29;"></span> -->
+                </div>
+            </div>
+        </section>
+        <section id="videos" class="attractions_brown">
+            <div class="container" id="flex-container">
+                <div class="flex-item">
+                    <h1 style="text-align:center;text-decoration:underline;color: #977c44;"><span>VIDEOS</span></h1>
+                    <div class="video-gallery">
+                      <div class="html5gallery" data-skin="gallery" data-responsive="true" style="height:500px;width:1000px;">
+                          <a href="https://www.youtube.com/embed/a7XxAcnIesk" frameborder="0" allowfullscreen><img src="images/magical.png" alt="Magical Kenya"> </a>
+                          <a href="https://www.youtube.com/embed/kVdXTduStXs" frameborder="0" allowfullscreen><img src="images/landing.png" alt="Activities"> </a>
+                          <a href="https://www.youtube.com/embed/tFbX8fUNDoc" frameborder="0" allowfullscreen><img src="images/nomad-diani.png" alt="Beautiful Coast"> </a>
+                          <a href="https://www.youtube.com/embed/uIBHuqeis3U" frameborder="0" allowfullscreen><img src="images/safaricom.png" alt="Landmarks"> </a>
+                          <a href="https://www.youtube.com/embed/6pqTicfMUoo" frameborder="0" allowfullscreen><img src="images/air.png" alt="Aerial View"> </a>
+                          <a href="https://www.youtube.com/embed/a9Gk6-Jy84Q" frameborder="0" allowfullscreen><img src="images/zebra.jpeg" alt="Wildlife"> </a>
+                          <a href="https://www.youtube.com/embed/w29Og-xxt7o" frameborder="0" allowfullscreen><img src="images/chale.png" alt="Chale Island"> </a>
+                          <a href="https://www.youtube.com/embed/ML4lIGRICnk" frameborder="0" allowfullscreen><img src="images/come.png" alt="Come to Kenya"> </a>
+                          <a href="https://www.youtube.com/embed/aljqPcFjOpE" frameborder="0" allowfullscreen><img src="images/pamper.png" alt="Pamper Yourself"> </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="subscribe">
+            <div class="container">
+                <div class="row">
+                    <div class="form">
+                        <h1>SUBSCRIBE</h1>
+                        <h3 style="font-family: 'Sansita', sans-serif;padding-top:30px;">Get our newsletters and updates delivered to your email.</h3>
+                        <form id="email">
+                            <input type="text" placeholder="Enter Your Email" style="width:350px; margin-right:30px;border: solid 1px white;text-align:center;height:30px;border-radius:5px;" id="myEmail" />
+                            <br>
+                            <input type="button" onclick="myFunction();" value="Subscribe" style="background-color:#F15A29;width:150px;border:none;color:white;border-radius:10px;" />
+                            <br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        </div>
+        <section id="contact" class="m-page scene_element scene_element--fadein content">
+            <footer>
+                <div class="container-fluid">
+                    <h1 class="section_header_white" style="color:white;">CONTACT US</h1>
+                    <br>
+                    <p style="font-size:18px;">For enquiries and more details about TourKenya reach us through our contact information below</p>
+                    <div class="row">
+                        <div class="col-md-3" id="facebook">
+                            <i class="fa fa-facebook fa-2x fa-blue"></i>
+                        </div>
+                        <div class="col-md-3" id="skype">
+                            <i class="fa fa-skype fa-2x fa-blue"></i>
+                        </div>
+                        <div class="col-md-3" id="github">
+                            <i class="fa fa-github fa-2x fa-purple"></i>
+                        </div>
+                        <div class="col-md-3" id="phone">
+                            <i class="fa fa-phone fa-2x fa-green"></i>
+                        </div>
+                        <div class="col-md-3" id="fb">
+                            <h4 class="underlineTwo">TourKenya</h4><span class="underline"></span>
+                        </div>
+                        <div class="col-md-3" id="sk">
+                            <h4 class="underlineTwo">TourKenya</h4><span class="underline"></span>
+                        </div>
+                        <div class="col-md-3" id="gt">
+                            <h4 class="underlineTwo">ChrisMunene</h4><span class="underline"></span>
+                        </div>
+                        <div class="col-md-3" id="tp">
+                            <h4 class="underlineTwo">+254727421969</h4><span class="underline"></span>
+                        </div>
+                        <div class="col-md-3" id="snapchat">
+                            <i class="fa fa-snapchat fa-2x fa-yellow"></i>
+                        </div>
+                        <div class="col-md-3" id="instagram">
+                            <i class="fa fa-instagram fa-2x fa-purple"></i>
+                        </div>
+                        <div class="col-md-3" id="whatsapp">
+                            <i class="fa fa-whatsapp fa-2x fa-green"></i>
+                        </div>
+                        <div class="col-md-3" id="windows">
+                            <i class="fa fa-windows fa-2x fa-blue"></i>
+                        </div>
+                        <div class="col-md-3" id="sp">
+                            <h4 class="underlineTwo">TourKenya</h4><span class="underline"></span>
+                        </div>
+                        <div class="col-md-3" id="ig">
+                            <h4 class="underlineTwo">@TourKenya</h4><span class="underline"></span>
+                        </div>
+                        <div class="col-md-3" id="wp">
+                            <h4 class="underlineTwo">0727421969</h4><span class="underline"></span>
+                        </div>
+                        <div class="col-md-3" id="ot">
+                            <h4 class="underlineTwo">TourKenya</h4><span class="underline"></span>
+                        </div>
+
+                        <h2 class="header">Accepted forms of payment</h2>
+                        <hr class="light">
+
+                        <div class="cold-md-offset-6">
+                            <i class="fa fa-paypal fa-2x fa-blue"></i> <i class="fa fa-google-wallet fa-green fa-2x"></i> <i class="fa fa-cc-visa fa-2x fa-yellow"></i> <i class="fa fa-cc-mastercard fa-2x fa-red"></i>
+                            <i class="fa fa-cc-amex fa-2x"></i>
+                        </div>
+                        <img src="icon/kenya.png" alt="" style="height:16px;width:16px;margin-top:10px;">
+                        <br>TourKenya.inc
+
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script>
+        function myFunction() {
+            email = document.getElementById("myEmail");
+            alert(email.value + " " + "has been successfully added to our email list. Thank You!");
+        }
+    </script>
+    <script type="text/javascript" src="html5gallery/jquery.js"></script>
+    <script type="text/javascript" src="html5gallery/html5gallery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/jquery.smoothState.min.js"></script>
+    <script src="js/script1.js"></script>
+    <script src="js/carousel.js" type="text/javascript"></script>
+</body>
+
+</html>

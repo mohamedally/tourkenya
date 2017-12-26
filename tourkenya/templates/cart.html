@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cart
+{% endblock %}
+
+{% block main %}
+
+<section class="offer section-wrapper-description">
+		<div class="container">
+			<h2 class="section-title">
+			Your Cart
+			</h2>
+			<div>
+				The finest hotels at this location.
+			</div>
+			<div class="row">
+			      {% for item in cart_list %}
+				<div>
+					<div class="offer-item" style="text-align:left;">
+					    <h4><strong>Destination:</strong> {{item.attraction}} </h4>
+						<h4><strong>Acccomodation:</strong> {{item.resort}}</h4>
+						<h4><strong>Your tour guide:</strong> <span>${{ item.company}}</span></h4>
+						<h4><strong>Length of Trip:</strong> {{ item.safari_days}}</h4>
+						<h4><strong>Trip for:</strong> {{item.people}}</h4>
+						<h4><strong>Total Charge:</strong> ${{ item.price}}</h4>
+
+				    <div style="display:inline-flex">
+					<form action="/remove_item" method="post">
+                        <button type="submit" class="button small fill-red transition-white" name="id" value="{{item.package_id}}">Remove item</button>
+                    </form>
+                    <form action="/checkout" method="post">
+                        <button type="submit" class="button small fill-red transition-white" name="id" value="{{item.package_id}}">Checkout</button>
+                    </form>
+                    </div>
+					</div>
+
+
+				</div>
+                {% endfor %}
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

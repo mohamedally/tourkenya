@@ -1,0 +1,91 @@
+/*
+ * Keyframes
+ */
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: none;
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/*
+ * CSS Page Transitions
+   /** Basic styles for an animated element */
+
+.scene_element {
+    -webkit-animation-duration: 3s;
+    -webkit-transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+}
+
+
+/** An element that fades in */
+
+.scene_element--fadein {
+    -webkit-animation-name: fadeIn;
+    
+}
+.delay20{
+  animation-delay: 20s;
+}
+/** An element that fades in and slides up */
+
+.scene_element--fadeinup {
+    -webkit-animation-name: fadeInUp;
+
+}
+.delay26{
+  animation-delay: 26s;
+}
+.delay30 {
+    animation-delay: 30s;
+}
+
+
+/** An element that fades in and slides from the right */
+
+.scene_element--fadeinright {
+    -webkit-animation-name: fadeInRight;
+}
+
+
+}
+
+/** Reverse "exit" animations */
+&.is-exiting {
+    .scene_element {
+        -webkit-animation-direction: alternate-reverse;
+    }
+}
+
+}

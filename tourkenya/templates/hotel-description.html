@@ -1,0 +1,312 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+
+    <div class="description">
+        {% for resort in resorts %}
+        <div class="container" style="padding-bottom:50px;">
+
+                <h1>{{ resort.name }}</h1>
+                <div style="padding-bottom:10px;">{{ resort.description }}</div>
+                <div class="row">
+                {% for item in wildlife %}
+                    <div>
+                        <iframe width="600" height="315" src="{{item.youtube}}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                {% endfor %}
+
+                </div>
+                <div class="stars-outer">
+                              <div class="stars-inner"></div>
+                        </div>
+                	<div>Ratings: {{resort.ratings }}</div>
+						 <div>Price Per Night: <span>${{ resort.price}}</span></div>
+
+                <div>Website: <a href="{{resort.website }}">{{ resort.website }}</a></div>
+
+
+        </div>
+        {% endfor %}
+
+     <section class="offer section-wrapper-description">
+		<div class="container">
+			<h2 class="section-title">
+				Our Packages
+			</h2>
+			<div style="padding-bottom: 10px;">
+				The best value for your money. We do all the work while you have fun.
+			</div>
+			<div class="row">
+			   {% for package in packages %}
+				<div class="col-sm-4 col-xs-6">
+					<div class="offer-item">
+					    <h3 style="padding-bottom: 10px;"><strong>
+					    	{{ package.place }}
+					    </strong>
+
+						</h3>
+						<div class="icon" >
+							<img style="height:200px;width:300px;" src='{{package.image1}}'>
+						</div>
+						 <div><strong>Price:</strong> <span style="text-decoration-line: line-through;color: #F05F40;">${{ package.original}}</span> {{ package.price }}</div>
+
+                    <div><strong>Hotel:</strong> {{ package.hotel}}</div>
+                    <div style="padding-bottom:10px;"><strong>Company:</strong> {{ package.company }}</div>
+                    <form action="/cart" method="post" id="booking" onSubmit="alert('Item has been added to cart.');">
+                          <div class="form-group row">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" class="form-control" name="start-date" placeholder="Example input" required>
+                          </div>
+                          <div class="form-group row">
+                            <label for="end-date">End Date</label>
+                            <input type="date" class="form-control" name="end-date" placeholder="Another input" required>
+                          </div>
+                          <div class="form-group row">
+                            <label for="end-date">Number Of People</label>
+                            <input type="number" class="form-control" name="people" placeholder="Another input" required>
+                          </div>
+                            <button type="submit" class="button small fill-red transition-white" name="id" value="{{package.id}}">BOOK NOW!</button>
+                        </form>
+				</div>
+				</div> <!-- /.col-md-3 -->
+                {% endfor %}
+
+
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section> <!-- /.offer -->
+
+    <section class="offer section-wrapper-description">
+		<div class="container">
+			<h2 class="section-title">
+				Affiliate Companies
+			</h2>
+			<div>
+				The best-rated companies in the region
+			</div>
+			<div class="row">
+			       {% for company in companies %}
+				    <div class="col-sm-4 col-xs-6">
+					    <div class="offer-item">
+					        <h3 style="padding-bottom: 10px;">
+						    {{ company.name }}
+						    </h3>
+						<div class="icon" >
+							<img style="height:200px;width:300px;" src='{{company.image1}}'>
+						</div>
+						<div class="stars-outer">
+                            <div class="stars-inner"></div>
+                        </div>
+
+						<div>Ratings: {{company.ratings }}</div>
+						<div>Price Per Night: <span>${{ company.price}}</span></div>
+
+                        <div>Website: <a href="{{company.website }}">{{ company.website }}</a></div>
+					</div>
+				</div> <!-- /.col-md-3 -->
+                {% endfor %}
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section> <!-- /.offer -->
+
+        </div>
+
+<section class="additional-services section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				Popular Activities
+			</h2>
+			<p class="section-subtitle">
+				Lorem Ipsum is simply dummy text of the industry.
+			</p>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-1.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Photography
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-2.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Cycling
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-3.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Waking
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-4.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Skiing
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-5.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Sea beach
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img src="/static/assets/images/add-srvc-6.png" alt="" class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								Hill tracking
+							</h4>
+							<p class="add-srvc">
+								Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div> <!-- /.col-md-4 col-sm-6 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section> <!-- /.Additional-services -->
+
+
+	<div class="section-wrapper sponsor">
+		<div class="container">
+			<div class="owl-carousel sponsor-carousel">
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="/static/assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+			</div> <!-- /.owl-carousel -->
+		</div> <!-- /.container -->
+	</div> <!-- /.sponsor -->
+
+{% endblock %}

@@ -1,0 +1,112 @@
+#overlay {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    transition: 1s 0.4s;
+}
+
+#progress {
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    width: 0;
+    top: 50%;
+}
+
+#progstat {
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+html, body, div, h1, p, a, video {
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
+    font-family: 'Sansita', sans-serif;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#main {
+    padding-top: 150px;
+}
+
+
+/*Alter the content position */
+
+.content {
+    position: relative;
+    /*    top: 30%;*/
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 720px;
+    margin-bottom: 20px;
+}
+
+.content__heading {
+    margin-bottom: 24px;
+    color: rgb(39, 39, 39);
+    font-size: 44px;
+}
+
+.content__teaser {
+    margin-bottom: 24px;
+    color: rgb(89, 89, 89);
+    font-size: 22px;
+}
+
+.content__cta {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 48px;
+    color: rgb(255, 60, 100);
+    font-size: 22px;
+    text-decoration: none;
+    border: solid 4px rgb(255, 60, 100);
+}
+
+
+/*Alter the position of the video */
+
+.video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+#logo {
+    height: 100px;
+    width: 120px;
+}
+
+h1, h3 {
+    color: white;
+}
