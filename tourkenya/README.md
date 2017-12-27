@@ -2,7 +2,7 @@
 ###Tour Kenya
 
 ##Authors
-1.Chris Kinyua and Mohammed Ali
+1.Chris Kinyua and Mohamed Ally
 
 
 ##Descripion
@@ -23,7 +23,7 @@ TourKenya is a website designed for the kenyan tourism industry. The site is mea
   * After logging in, they can view and choose all the companies that facilitate their arrival and stay in the country.
     When booking:
 
-    1.They should choose their duration of stay i.e their preffered start and end date.
+    1.They should choose their duration of stay i.e their prefered start and end date.
 
     2.They should enter the number of people in their group.
 
@@ -41,6 +41,7 @@ TourKenya is a website designed for the kenyan tourism industry. The site is mea
 
 4.Python
 
+5. SQL
 
 ##Directions
 ####To enter the website:
